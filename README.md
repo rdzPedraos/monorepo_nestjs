@@ -1,6 +1,6 @@
 # Monorepo Template
 
-Template para Monorepos gestionado con Turbopack que usa em front Vite+React+TS y back NestJS.
+Template para monorepos gestionado con Turbopack que usa Vite+React+TS (front) y NestJS (back).
 
 Este template está diseñado inicialmente para facilitar el prototipado rápido y la validación de ideas. La arquitectura monorepo ofrece varias ventajas estratégicas:
 
