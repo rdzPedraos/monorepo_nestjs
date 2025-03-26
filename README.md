@@ -1,6 +1,25 @@
 # Monorepo Template
 
-Este proyecto es un monorepo gestionado con Turbopack que contiene una aplicación frontend construida con Vite+React+TS y un backend con NestJS.
+Template para Monorepos gestionado con Turbopack que usa em front Vite+React+TS y back NestJS.
+
+Este template está diseñado inicialmente para facilitar el prototipado rápido y la validación de ideas. La arquitectura monorepo ofrece varias ventajas estratégicas:
+
+1. **Desarrollo Inicial Ágil**:
+
+   - Facilita el despliegue rápido como un monolito
+   - Simplifica la gestión de dependencias y configuración
+   - Permite iteraciones rápidas en etapas tempranas
+
+2. **Escalabilidad Planificada**:
+
+   - La estructura está pensada para facilitar la separación futura
+   - Los proyectos están organizados como aplicaciones independientes
+   - El acoplamiento mínimo permite separar frontend y backend cuando sea necesario
+
+3. **Evolución Natural**:
+   - Comienza como un monolito para validar ideas rápidamente
+   - Escala a microservicios cuando el proyecto lo requiera
+   - Mantiene la base de código organizada para facilitar la transición
 
 ## Estructura del Proyecto
 
@@ -32,6 +51,23 @@ cd monorepo_nestjs
 ```bash
 npm install
 ```
+
+## Gestión de Dependencias
+
+Para agregar nuevas dependencias a aplicaciones específicas dentro del monorepo, utiliza el flag `--workspace`:
+
+```bash
+# Instalar una dependencia solo en la aplicación cliente
+npm install react-query --workspace client
+
+# Instalar una dependencia solo en el servidor
+npm install @nestjs/jwt --workspace server
+
+# Instalar una dependencia de desarrollo
+npm install -D @types/react --workspace client
+```
+
+Este enfoque asegura que las dependencias se instalen en el `package.json` correcto dentro de la estructura del monorepo.
 
 ## Desarrollo
 
