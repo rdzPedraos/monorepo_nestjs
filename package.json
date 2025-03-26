@@ -1,5 +1,5 @@
 {
-  "name": "ocr",
+  "name": "monorepo",
   "version": "1.0.0",
   "main": "index.js",
   "packageManager": "npm@10.9.2",
