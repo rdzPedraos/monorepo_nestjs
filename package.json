@@ -8,7 +8,8 @@
         "build": "turbo build",
         "start": "node apps/api/dist/main.js",
         "format": "turbo format",
-        "prepare": "husky"
+        "lint": "turbo lint",
+        "prepare": "husky install"
     },
     "keywords": [],
     "author": "",
@@ -18,13 +19,26 @@
         "apps/*"
     ],
     "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^7.1.0",
+        "@typescript-eslint/parser": "^7.1.0",
+        "eslint": "^9.18.0",
+        "eslint-config-prettier": "^10.0.1",
+        "eslint-plugin-prettier": "^5.2.2",
+        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react-hooks": "^5.0.0",
+        "globals": "^15.14.0",
         "husky": "^9.0.11",
         "lint-staged": "^15.2.2",
         "prettier": "^3.2.5",
-        "turbo": "^2.4.4"
+        "turbo": "^2.4.4",
+        "typescript-eslint": "^8.20.0"
     },
     "lint-staged": {
-        "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{json,css,scss,md}": [
             "prettier --write"
         ]
     }
