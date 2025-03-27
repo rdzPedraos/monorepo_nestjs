@@ -1,5 +1,3 @@
-import "./App.css";
-
 function App() {
   const testConnection = async () => {
     const response = await fetch("/api");
