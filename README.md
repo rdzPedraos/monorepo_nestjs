@@ -150,7 +150,7 @@ El proyecto incluye herramientas para mantener la calidad y consistencia del có
 
 ### Linting y Formateo
 
-- **ESLint**: Configuración global en `eslint.config.mjs` con soporte para TypeScript y React
+- **ESLint**: Configuración global en `eslint.config.js` con soporte completo para ESLint v9, TypeScript y React
 - **Prettier**: Formateo consistente con configuración en `.prettierrc`
 - **Pre-commit Hooks**: Utiliza Husky para formatear y lintear automáticamente el código antes de cada commit
 
